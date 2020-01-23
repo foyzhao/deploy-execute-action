@@ -1,0 +1,22 @@
+name: Deploy and execute
+description: Deploy a executable jar file to a remote windows server and execute it
+inputs:
+  server:
+    description: 'server ip'
+    required: true
+  account:
+    description: 'server account'
+    required: false
+    default: 'Administrator'
+  password:
+    description: 'server password'
+    required: true
+  artifact:
+    description: 'jar artifact file'
+    required: true
+  path:
+    description: 'deploy path'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
